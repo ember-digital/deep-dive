@@ -11,7 +11,7 @@ function randomIntFromInterval(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-app.use((_, __, next) => setTimeout(next, randomIntFromInterval(0, 5000)));
+app.use((_, __, next) => setTimeout(next, randomIntFromInterval(0, 15000)));
 
 function randomFailuresMiddleware(_, res, next) {
   if (Math.random() > 0.5) {
